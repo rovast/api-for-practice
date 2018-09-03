@@ -2,7 +2,7 @@
 
 Just practice, be easy and have fun!
 
-**Gloals**
+**Goals**
 
 Offer a simple api for FE developers to practice building whole site without thinking about the backend.
 
