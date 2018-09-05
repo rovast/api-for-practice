@@ -14,6 +14,8 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(App\User::class, function (Faker $faker) {
+    $faker->addProvider(new \Faker\Provider\zh_CN\Person($faker));
+
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
