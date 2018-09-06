@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['namespace' => 'Api'], function () {
+    // 获取文章列表
+    Route::get('articles', 'ArticleController@index');
+
+    // 获取分类列表
+    Route::get('categories', 'CategoryController@index');
+
+    // 标签列表
+    Route::get('tags', 'TagController@index');
+});
