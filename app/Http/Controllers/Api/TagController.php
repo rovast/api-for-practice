@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class TagController extends Controller
+class TagController extends ApiController
 {
     //
 }
