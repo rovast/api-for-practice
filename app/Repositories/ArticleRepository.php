@@ -25,9 +25,9 @@ class ArticleRepository
 
         // 如果没有文章，则按照热度返回
         if (empty($category)) {
-            return Article::orderByDesc('views')->get();
+            return Article::orderByDesc('views')->paginate(config('pager.default'));
         }
 
-        return $category->articles;
+        return $category->articles()->paginate(config('pager.default'));
     }
 }

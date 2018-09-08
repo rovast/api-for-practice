@@ -15,13 +15,14 @@ class ArticleResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'author' => $this->user->name,
-            'time'   => $this->updated_at->diffForHumans(),
-            'tags'   => TagResource::collection($this->tags),
-            'title'  => $this->title,
-            'cover'  => $this->cover,
-            'views'  => $this->views,
-            'stars'  => $this->stars,
+            'author'   => $this->user->name,
+            'time'     => $this->updated_at->diffForHumans(),
+            'category' => new CategoryResource($this->category),
+            'tags'     => TagResource::collection($this->tags),
+            'title'    => $this->title,
+            'cover'    => $this->cover,
+            'views'    => $this->views,
+            'stars'    => $this->stars,
         ];
     }
 }

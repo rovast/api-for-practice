@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Article;
+use App\Http\Resources\ArticleCollection;
 use App\Http\Resources\ArticleResource;
 use App\Repositories\ArticleRepository;
 use Illuminate\Http\Request;
@@ -21,8 +23,8 @@ class ArticleController extends ApiController
         $categoryAlias = $request->input('category_alias', 'recommend');
 
         $list = $this->articleRepository->getListByCategoryAlias($categoryAlias);
-        $data = ArticleResource::collection($list);
+        $data = new ArticleCollection($list);
 
-        return $this->responseSuccess($data);
+        return $this->responseSuccess($data->toResponse($request)->getData());
     }
 }
