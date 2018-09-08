@@ -8,7 +8,7 @@ Just practice, be easy and have fun!
 
 **api docs**
 
-(api docs)[./api-docs.html]
+(api docs)[https://apizza.net/console/project/2431c2041f3aa6d062e02de446c20f4d/browse]
 
 **Todo list**
 - [√] 首页（游客身份）
