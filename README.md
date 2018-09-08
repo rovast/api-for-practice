@@ -4,13 +4,15 @@ Just practice, be easy and have fun!
 
 **Goals**
 
-Offer a simple api for FE developers to practice building whole site without thinking about the backend.
+仿[掘金](https://juejin.im/)，根据掘金的基本功能，用 laravel 写出 API，方便前端人员做自己 demo 项目时直接调用。
 
-And the api build from juejin.im, so that you can build a practice SPA project just like that!
+**api docs**
+
+(api docs)[./api-docs.html]
 
 **Todo list**
-- index(visitor role)
-- index(user role)
+- [√] 首页（游客身份）
+- 首页（用户登录）
 - pins
 - books
 - repos
@@ -18,9 +20,4 @@ And the api build from juejin.im, so that you can build a practice SPA project j
 
 **Done**
 
-- api for get articles, tags and categories
-
-**Next**
-
-add pagination for api data list
-
+- 完成首页游客获取 文章列表、分类列表、标签列表

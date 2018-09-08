@@ -16,7 +16,7 @@ class ArticleResource extends JsonResource
     {
         return [
             'author'   => $this->user->name,
-            'time'     => $this->updated_at->diffForHumans(),
+            'time'     => $this->updated_at->toDateTimeString(),
             'category' => new CategoryResource($this->category),
             'tags'     => TagResource::collection($this->tags),
             'title'    => $this->title,
